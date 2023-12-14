@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lucas DAW 2023/24</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <p>Lucas Sánchez Acosta</p>
+    </header>
+    <nav>
+        <ul>
+            <li onclick="return ShowContent('mascotas');">Mis mascotas</li>
+            <li onclick="return ShowContent('aficiones');">Aficiones</li>
+            <li onclick="return ShowContent('formacion');">Formación</li>
+        </ul>
+    </nav>
+    <main>
+        <section id="mascotas">
+            <figure>
+                <img src="images/silvestre.png">
+                <figcaption>Silvestre</figcaption>
+            </figure>
+            <figure>
+                <img src="images/agallas.png">
+                <figcaption>Agallas</figcaption>
+            </figure>
+        </section>
+        <section id="aficiones">
+            <figure>
+                <img src="images/baloncesto.jpg">
+                <figcaption>Baloncesto</figcaption>
+            </figure>
+            <figure>
+                <img src="images/rock.jpg">
+                <figcaption>Música</figcaption>
+            </figure>
+            <figure>
+                <img src="images/peliculas.png">
+                <figcaption>Películas y series</figcaption>
+            </figure>
+            <figure>
+                <img src="images/tenis.png">
+                <figcaption>Tenis</figcaption>
+            </figure>
+        </section>
+        <section id="formacion">
+            <figure>
+                <img src="images/ieselargar.jpg">
+                <figcaption>I.E.S. El Argar</figcaption>
+            </figure>    
+            <figure>
+                <img src="images/redes.jpg">
+                <figcaption>Técnico Superior Sistemas de Telecomunicaciones e Informáticos.</figcaption>
+                <figcaption>I.E.S. El argar (2003-2005)</figcaption>
+            </figure>
+            <figure>
+                <img src="images/iesaguadulce.png">
+                <figcaption>I.E.S. Aguadulce</figcaption>
+            </figure>
+            <figure>
+                <img src="images/programando.png">
+                <figcaption>Técnico Superior Desarrollo de Aplicaciones Web.</figcaption>
+                <figcaption>I.E.S. Aguadulce (2022-Actualidad)</figcaption>
+            </figure>    
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li class="perfil">Soporte<p class="perfil-texto">Soportar, ¿a quién?</p></li>
+            <li class="perfil">Acerca de...<p class="perfil-texto">Acércate, acércame, acércalo...</p></li>
+        </ul>
+        <figure>
+            <a href="https://www.facebook.com/profile.php?id=100007421804886&locale=es_ES"><img src="icons/facebook.png" alt="logo facebook"></a>
+            <a href="https://www.instagram.com/agallas280311/"><img src="icons/instagram.png" alt="logo instagram"></a>
+        </figure>
+    </footer>
+    <script type="text/javascript">
+        function ShowContent(content) {
+            document.getElementById("mascotas").style.display = 'none';
+            document.getElementById("aficiones").style.display = 'none';
+            document.getElementById("formacion").style.display = 'none';
+            document.getElementById(content).style.display = 'inline-flex';
+        }
+    </script>
+</body>
+</html>

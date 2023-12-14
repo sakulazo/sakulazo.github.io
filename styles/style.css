@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@800&display=swap');
+
+@font-face {
+    font-family: 'Anton';
+    src: url('../fonts/Anton-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+:root{
+    --color-primario: #3498db;
+    --color-secundario: #aed6f1;
+    --color-terciario: #f7dc6f;
+}
+
+/*****  SELECTORES GENERICOS Y MAIN  *****/
+*{
+    box-sizing: border-box;
+    font-family: Roboto, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:hover{
+    transition:  0.5s ease;
+}
+html{
+    font-size: clamp(1em, 0.7vw + 0.5em, 2em);
+    overflow-x: hidden;
+}
+main{
+    background-color: #EEF2F5;
+}
+/******* FIN SELECTORES GENERICOS  *******/
+
+/******* SELECTORES DE ELEMENTOS *********/
+img{
+    max-width: 400px;
+    border-radius: 20px;
+}
+div{
+    max-width: 400px;
+    text-align: center;
+}
+/******* FIN SELECTORES DE ELEMENTOS *******/
+
+
+/********************  HEADER  ********************/ 
+header{
+    display:grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    background: linear-gradient(15deg,var(--color-primario), white,var(--color-primario));
+    padding: 0.5vw;
+}
+header p{        
+    font-size: 3.5em;
+    font-family: Gabarito, Helvetica, sans-serif;
+    text-shadow: 3px 3px 2px var(--color-primario);
+    color:var(--color-terciario);
+    
+} 
+/******************  FIN HEADER  ******************/
+
+
+/*********************  NAV  **********************/ 
+nav{
+    background-color: var(--color-primario);
+    padding: 0.5vw;
+    display: grid;
+    justify-content: center;
+    border-bottom: var(--color-secundario) 5px solid;
+    font-size: clamp(1em, 1vw + 0.8em, 1.5em);
+    font-weight: 600;
+}
+nav ul{
+    display:flex;    
+    gap: 10vw;
+
+}
+nav li{
+    border:transparent 2px solid;
+    display: flex;
+    padding: 5px 40px;
+    background-color: var(--color-secundario);
+    text-align: center;
+    font-size: 0.6em;
+    align-items: center;
+}
+nav li:hover{
+    color: white;
+    cursor: pointer;
+    border: white 2px solid;
+}
+/*******************  FIN NAV  ********************/
+
+
+/*****************   BODY  ******************/
+section figure{
+    display:inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    justify-content:center;
+    align-self: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+section{
+    /* Las secciones ocuparán el 80% del ancho 
+    y estarán centradas horizontalmente */
+    margin: 0 auto;
+    
+    display: none;
+    padding: 30px;
+    
+}
+#mascotas, #aficiones, #formacion{
+    grid-template-columns: 1fr;
+    column-gap: 2vw;
+    row-gap: 4vw;
+    flex-wrap: wrap;
+}
+#mascotas{
+    display:flex;
+}
+/*****************  FIN BODY  ******************/
+
+
+/********************  FOOTER  ********************/
+footer{
+    display:grid;
+    grid-template-columns: 3fr 2fr;
+    background-color: var(--color-primario);
+    height: auto;
+    padding: 5px 0px;
+    border-top: var(--color-secundario) 5px solid;
+    overflow: hidden;
+}
+footer ul{
+    display:flex;
+    list-style:none;
+    justify-content:space-evenly;
+    align-self: center;
+    gap: 2em;
+    
+}
+footer li{
+    text-align: center;
+    font-size: 1.2em;
+}
+footer li:hover{
+    cursor: pointer;
+    color: var(--color-terciario);
+}
+footer figure{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content:space-evenly;
+    align-self: center;
+    flex-wrap: wrap;
+}
+footer img{
+    width: 50px;
+    height: 50px;
+    border: var(--color-primario) 5px solid;
+    border-radius: 10px;
+}
+footer img:hover{
+    border: var(--color-terciario) 5px solid;
+    background-color: var(--color-terciario);
+    cursor: pointer;
+}
+.perfil{
+    position: relative;
+}
+.perfil .perfil-texto{
+    visibility: hidden;
+    opacity: 0%;
+    width: 200%;
+    background-color: var(--color-terciario);
+    color: black;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top:-100%;
+    left: 72%;
+    display: flex;
+    flex-direction: column;
+}
+.perfil:hover .perfil-texto{
+    visibility: visible;
+    opacity: 100%;
+    transition: opacity 0.3s linear 0.8s;
+    cursor: pointer;
+}
+/******************  FIN FOOTER  ******************/
