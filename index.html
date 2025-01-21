@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1VNBNCEXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-S1VNBNCEXX');
-    </script>
-    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/551a3e6e51c33.js" data-cmp-host="a.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
-
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -27,6 +16,7 @@
             <li onclick="return ShowContent('mascotas');">Mis mascotas</li>
             <li onclick="return ShowContent('aficiones');">Aficiones</li>
             <li onclick="return ShowContent('formacion');">Formación</li>
+            <li onclick="return ShowContent('servicios');">Servicios</li>
         </ul>
     </nav>
     <main>
@@ -40,6 +30,7 @@
                 <figcaption>Agallas</figcaption>
             </figure>
         </section>
+
         <section id="aficiones">
             <figure>
                 <img src="images/baloncesto.jpg">
@@ -58,6 +49,7 @@
                 <figcaption>Tenis</figcaption>
             </figure>
         </section>
+
         <section id="formacion">
             <figure>
                 <img src="images/ieselargar.jpg">
@@ -78,6 +70,20 @@
                 <figcaption>I.E.S. Aguadulce (2022-Actualidad)</figcaption>
             </figure>    
         </section>
+        
+            
+
+        <section id="servicios">
+            <figure>
+                <img src="images/programando.jpg">
+                <figcaption>Programación a medida</figcaption>
+            </figure>
+            <figure>
+                <img src="images/diseño.jpg">
+                <figcaption>Diseño webs personalizado</figcaption>
+            </figure>
+        </section>
+
     </main>
     <footer>
         <ul>
@@ -94,6 +100,7 @@
             document.getElementById("mascotas").style.display = 'none';
             document.getElementById("aficiones").style.display = 'none';
             document.getElementById("formacion").style.display = 'none';
+            document.getElementById("servicios").style.display = 'none';
             document.getElementById(content).style.display = 'inline-flex';
         }
     </script>
